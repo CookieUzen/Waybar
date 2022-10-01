@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: configure
-        run: meson -Dman-pages=enabled build
+        run: meson -Dman-pages=enabled -Dexperimental=true build
       - name: build
         run: ninja -C build
       - name: test
